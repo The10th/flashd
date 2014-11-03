@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Flash'd</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+
+   <div ng-controller='AuthController' class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img height='25' width='25' src="./img/flashd.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class='nav navbar-nav navbar-right'>
+
+            <li>
+                <a href="#/login" ng-hide='currentUser'>Log In</a>
+
+            </li>
+            <li>
+              <a href="" ng-click='logout()' ng-show='currentUser'>Log Out</a>
+            </li>
+            
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+  <div ng-view class='container'></div>  
+
+  <script type="text/javascript" src='js/jquery-2.1.1.min.js'></script>
+  <script type="text/javascript" src='js/bootstrap.js'></script>
+
+  <!-- Angular JS-->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  
+   <!-- Firebase -->
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+  <script src='https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js'></script>
+
+  <!-- waitlist javascript -->
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+
+</body>
+</html>
